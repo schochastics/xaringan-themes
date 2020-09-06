@@ -1,0 +1,176 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+/* colors */
+/*
+blue   - #57BCE5
+yellow - #FFC93C
+red    - #CC0000
+green  - #81B214
+white  - #FFFFFF
+*/
+
+/*Background image*/
+.remark-slide-content{
+  background-image: url("figures/blackboard.png");
+  background-size: cover;
+}
+
+body{
+  color: white;
+}
+
+/*Headings*/
+h1{
+ font-family: 'Shadows Into Light';
+ font-weight: 700;
+ font-size: 55px;
+ width:1107px;
+ text-align: left;
+ background-image: url(figures/underline-green.png);
+ background-position: 0 1.4em;
+ background-repeat: repeat-x;
+ background-size: 1107px 12px;
+}
+
+h2{
+ font-family: 'Shadows Into Light';
+}
+
+h3{
+ font-family: 'Shadows Into Light';
+ /* background-image: url("figures/chalk1-green.png");
+ background-repeat: no-repeat; Do not repeat the image 
+ background-position: center;
+ background-size: 100% 50%;*/
+}
+
+/* text ad structures*/
+p{
+ font-family: Pangolin;
+ font-size: 24px;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+ font-family: Pangolin;
+ font-size: 24px;
+ padding-left: 30px;
+ background: url('figures/dot-green.png') no-repeat left top;
+}
+
+pre, code {
+ font-family: Pangolin;
+ font-size: 16px;
+ background-color: transparent !important;
+ border-style: solid;
+ border-width: 5px 5px 5px 5px;
+ border-image: url(figures/frame-green.png) 10% 0% 40% 20% stretch;
+}
+
+/* slide number*/
+.remark-slide-number {
+ font-family: Pangolin;
+ color:white;
+ opacity: 0.9;
+}
+
+/*extra classes*/
+.framed {
+ display: inline-block;
+ border-style: solid;
+ padding: 10px;  
+ border-width: 15px 15px 15px 15px;
+ border-image: url(figures/frame2-green.png) 20% 20% 20% 20% stretch;
+}
+
+.masked{
+      -webkit-mask-image: url(https://i.imgur.com/XlPoNUn.png);
+      mask-image: url(https://i.imgur.com/XlPoNUn.png);
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      display: block;
+      max-width: 100%;
+}
+
+.small{
+  font-size: 18px;
+}
+
+.large{
+  font-size: 30px;
+}
+
+.huge{
+  font-size: 34px;
+}
+
+.left-board {
+  float: left;
+  width: 48%;
+  height: 100%;
+  padding-right: 2%;
+  padding-top: 20px;
+  background-image: url(figures/underline-green.png);
+  background-position: 100% 0;
+  background-repeat: repeat-y;
+  background-size: 13px 510px;
+}
+.right-board {
+  float: right;
+  padding-top: 20px;
+  height: 100%;
+  width: 48%;
+}
+.right-board + * {
+  clear: both;
+}
+
+/*-----------------------------------------------------------------------------*/
+/* title slide */
+.title-slide h1{
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+}
+
+/* subtitle */
+.title-slide h2{
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  font-size: 35px;
+}
+
+/* optional: name */
+.title-slide h3:nth-of-type(1){
+  font-weight: 400;
+  font-size: 24px;
+  position: absolute;
+  text-align: right;
+  right:2%;
+  bottom:7%;
+}
+/* optional: institute*/
+.title-slide h3:nth-of-type(2){
+  font-weight: 400;
+  font-size: 24px;
+  position: absolute;
+  text-align: right;
+  right:2%;
+  bottom:2%;
+}
+/* optional: date */
+.title-slide h3:nth-of-type(3){
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  right:2%;
+  top:0%;
+}
