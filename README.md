@@ -1,6 +1,7 @@
 # xaringan themes
 
-A collection of novelty themes for xaringan slides in R.
+A collection of novelty themes for xaringan slides in R. 
+The themes are not packaged. Simply clone the repository and use the `skeleton.Rmd` as a starting point.
 
 # blackboard
 
