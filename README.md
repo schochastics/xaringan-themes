@@ -27,3 +27,9 @@ change the css style sheet name to get different color themes.
 `css: "blackboard-white.css"`
 ![](screenshots/blackboard-white.png)
 
+# vintage
+
+A worn paper/vintage theme (under construction)
+
+The gif shows off all features (see the `skeleton.Rmd` file for code) 
+![](screenshots/vintage-demo.gif)
