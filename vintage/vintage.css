@@ -77,8 +77,8 @@ pre, code {
 
 /*extra classes*/
 .masked-img{
-      -webkit-mask-image: url(https://i.imgur.com/Py4Vs2w.png);
-      mask-image: url(https://i.imgur.com/Py4Vs2w.png);
+      -webkit-mask-image: url(https://raw.githubusercontent.com/schochastics/xaringan-themes/master/vintage/figures/grunge-mask-img.png);
+      mask-image: url(https://raw.githubusercontent.com/schochastics/xaringan-themes/master/vintage/figures/grunge-mask-img.png);
       -webkit-mask-size: 100% 100%;
       mask-size: 100% 100%;
       display: block;
@@ -86,8 +86,8 @@ pre, code {
 }
 
 .masked-text{
-      -webkit-mask-image: url(https://i.imgur.com/MBZ2R2s.png);
-      mask-image: url(https://i.imgur.com/MBZ2R2s.png);
+      -webkit-mask-image: url(https://raw.githubusercontent.com/schochastics/xaringan-themes/master/vintage/figures/grunge-mask-text.png);
+      mask-image: url(https://raw.githubusercontent.com/schochastics/xaringan-themes/master/vintage/figures/grunge-mask-text.png);
       -webkit-mask-size: 100% 100%;
       mask-size: 100% 100%;
       display: block;
