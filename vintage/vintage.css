@@ -1,0 +1,171 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+/* colors */
+/*
+blue   - #57BCE5
+yellow - #FFC93C
+red    - #CC0000
+green  - #81B214
+white  - #FFFFFF
+*/
+
+/*Background image*/
+.remark-slide-content{
+  background-image: url("figures/vintage-background.jpg");
+  background-size: cover;
+}
+
+body{
+  color: white;
+}
+
+/*Headings*/
+h1{
+ font-family: 'Smythe', cursive;
+ font-weight: 700;
+ font-size: 55px;
+ width:1107px;
+ text-align: left;
+}
+
+h2{
+ font-family: 'Smythe', cursive;
+}
+
+h3{
+ font-family: 'Smythe', cursive;
+}
+
+/* text and structures*/
+p{
+ font-family: 'Yesteryear', cursive;
+ font-size: 24px;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+ font-family: 'Yesteryear', cursive;
+ font-size: 24px;
+ padding-left: 35px;
+ background: url('figures/seal.png') no-repeat left top;
+}
+
+pre, code {
+ font-family: 'Smythe', cursive;
+ font-size: 16px;
+ background-color: transparent !important;
+ border-style: solid;
+ border-width: 5px 5px 5px 5px;
+ border-color: #7d5e2a;
+ border-image: url(figures/grunge-frame.png) 20% 20% 20% 20% stretch;
+}
+
+/* slide number*/
+.remark-slide-number {
+ font-family: 'Yesteryear', cursive;
+ color:white;
+ opacity: 0.9;
+}
+
+/*extra classes*/
+.masked-img{
+      -webkit-mask-image: url(https://i.imgur.com/Py4Vs2w.png);
+      mask-image: url(https://i.imgur.com/Py4Vs2w.png);
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      display: block;
+      max-width: 100%;
+}
+
+.masked-text{
+      -webkit-mask-image: url(https://i.imgur.com/MBZ2R2s.png);
+      mask-image: url(https://i.imgur.com/MBZ2R2s.png);
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      display: block;
+      max-width: 100%;
+}
+
+.small{
+  font-size: 18px;
+}
+
+.large{
+  font-size: 30px;
+}
+
+.huge{
+  font-size: 34px;
+}
+
+.ancient > p{
+  font-family: 'UnifrakturMaguntia' !important;
+  font-size: 24px;
+  color: black;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right + * {
+  clear: both;
+}
+
+/*-----------------------------------------------------------------------------*/
+/* title slide */
+.title-slide h1{
+  font-family: 'UnifrakturMaguntia';
+  font-size: 65px;
+  position: absolute;
+  left: 15%;
+  bottom: 65%;
+}
+
+/* subtitle */
+.title-slide h2{
+  font-family: 'UnifrakturMaguntia';
+  font-size: 55px;
+  position: absolute;
+  left: 15%;
+  bottom: 45%;
+}
+
+/* optional: name */
+.title-slide h3:nth-of-type(1){
+  font-weight: 400;
+  font-size: 34px;
+  position: absolute;
+  text-align: right;
+  right:15%;
+  bottom:20%;
+}
+/* optional: institute*/
+.title-slide h3:nth-of-type(2){
+  font-weight: 400;
+  font-size: 34px;
+  position: absolute;
+  text-align: right;
+  right:15%;
+  bottom:16%;
+}
+/* optional: date */
+.title-slide h3:nth-of-type(3){
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  right:2%;
+  top:0%;
+}

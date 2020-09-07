@@ -1,0 +1,112 @@
+---
+title: "Presentation Title"
+subtitle: "Subtitle"
+author: "David Schoch"
+date: "06/09/2020"
+institute: "The Mitchell Centre for Social Network Analysis"
+output:
+  xaringan::moon_reader:
+    css: "vintage.css"
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+    seal: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path   = "figures/",
+                      fig.retina = 2,
+                      warning = FALSE,
+                      error = FALSE,
+                      message = FALSE)
+
+
+library(showtext)
+library(ggplot2)
+font_add_google("Yesteryear", "Yesteryear")
+font_add_google("UnifrakturMaguntia","UnifrakturMaguntia")
+showtext_auto()
+
+#vintage theme
+theme_vintage <- function () { 
+  theme_minimal() %+replace% 
+    theme(
+      axis.ticks = element_line(colour = "white",size=0.5),
+      text = element_text(colour = "white"),
+      axis.text  = element_text(colour = "white",family = "Yesteryear",size=18),
+      axis.title  = element_text(colour = "white",family = "Yesteryear",size=24),
+      panel.background  = element_rect(colour = NA,fill="transparent",size=0.5),
+      plot.background = element_rect(colour = "white",fill="transparent",size=1.5),
+      legend.position = "bottom",
+      legend.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(colour = "white",size=0.5),
+      panel.grid.major.y = element_line(colour = "white",size=0.5),
+      legend.text = element_text(size = 24)
+    )
+}
+
+# make all plt bg transparent
+knitr::opts_chunk$set(dev.args=list(bg="transparent"))
+```
+
+# Code style and ggplot theme
+
+```{r testing,fig.showtext = TRUE,fig.width=12,fig.height=4,out.height="100%",fig.align="center"}
+ggplot(cars) +
+  geom_point(aes(speed,dist),col="white")+
+  theme_vintage()
+```
+
+
+---
+
+# "Ancient" text
+
+.masked-text[
+.ancient[
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet, nisl tincidunt venenatis iaculis, est risus lobortis ligula, ultrices semper ligula dolor vitae nulla. Phasellus aliquam, erat id auctor pretium, odio elit posuere ex, et aliquam magna nisi et nunc. Phasellus ultricies vestibulum convallis. Fusce sit amet augue nec justo porta venenatis. Duis condimentum ornare turpis, a volutpat nisi venenatis rhoncus. Suspendisse eget lectus et tellus egestas volutpat eget id dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris sagittis fringilla justo, eu convallis lacus suscipit ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut laoreet magna erat, sed tempus magna molestie at. Mauris nec nulla vitae leo dictum ullamcorper. Pellentesque luctus ultrices convallis. Nunc id odio nisl. Duis id ligula sed nibh tempus auctor et vel purus. Donec vehicula mollis ligula, at vehicula metus hendrerit feugiat.
+  ]
+]
+
+---
+
+# Lists
+
+- Lists
+
+- are 
+
+- fun
+
+---
+
+## earliest mention of the Karate network
+
+.pull-left[
+  .masked-text[
+  .ancient[
+  A social netw'rk of a karate club wast did study by 
+Zechariah f'r a p'riod of three years from 1570 to 1572. the netw'rk captures 34 memb'rs of a karate club, documenting links between pairs of memb'rs who is't int'ract'd outside the club.  During the studyeth a conflict did arise between the administrat'r "Little John" and instructeth'r "mr.  Good morrow" (pseudonyms), which hath led to the did split of the club into two.  Half of the memb'rs f'rm'd a new club 'round mr.  Good morrow; memb'rs from the oth'r parteth hath found a new instructeth'r 'r gaveth up karate.  Bas'd on did collect data 
+Zechariah c'rrectly assign'd all but one memb'r of the club to the groups those gents actually did join aft'r the did split.
+  ]
+  ]
+]
+
+.pull-right[
+```{r testing2,echo=FALSE,fig.showtext = TRUE,fig.width=11,fig.height=9,fig.align="center",out.extra="class='masked-text'"}
+library(ggraph)
+library(igraph)
+g <- make_graph("Zachary")
+V(g)$name <- ""
+V(g)$name[1] <- "Little John"
+V(g)$name[34] <- "Good Morrow"
+ggraph(g,"stress") + 
+  geom_edge_link(edge_color = "#3c1f02",end_cap=circle(8,"pt"),start_cap=circle(8,"pt")) +
+  geom_node_point(shape=21,fill=NA,col="#3c1f02",stroke=3,size=8)+
+  geom_node_text(aes(label=name),family="UnifrakturMaguntia",repel=TRUE,size=15)+
+  theme_graph(background = "transparent")
+```
+]
