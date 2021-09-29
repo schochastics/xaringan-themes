@@ -1,0 +1,45 @@
+---
+title: "Presentation title"
+author: "David Schoch"
+institute: "University of Manchester"
+date: "date"
+output:
+  xaringan::moon_reader:
+    css: "paint.css"
+    nature:
+      slideNumberFormat: ""
+      highlightStyle: monokai
+      highlightLines: true
+      ratio: "16:9"
+    seal: true
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+layout: true 
+class: paint-bg
+
+---
+
+# slide title
+
+
+- list item 1
+- list item 2
+- list item 3
+
+---
+
+# code example
+
+```{r eval=FALSE}
+2+2
+```
+
+`inline code`
+
+.highlight[test of highlighting]
+

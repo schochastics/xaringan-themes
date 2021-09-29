@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap');
+/*c("#155263", "#ff6f3c", "#ff9a3c", "#ffc93c")*/
+
+::selection {
+  color: black;
+  background: #ffc93c;
+}
+
+/*-----------------------------------------------------------------------------*/
+/* title slide */
+.title-slide{
+  background-image: url("figures/bg.png");
+  background-size: cover;
+}
+
+.title-slide h1{
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  color: white;
+}
+
+/* subtitle */
+.title-slide h2{
+  position: absolute;
+  left: 15%;
+  bottom: 25%;
+  font-size: 35px;
+  color: white;
+}
+
+/* optional: name */
+.title-slide h3:nth-of-type(1){
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  text-align: right;
+  right:2%;
+  bottom:7%;
+  color: #ffc93c;
+}
+/* optional: institute*/
+.title-slide h3:nth-of-type(2){
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  text-align: right;
+  right:2%;
+  bottom:2%;
+  color: #ffc93c;
+}
+/* optional: date */
+.title-slide h3:nth-of-type(3){
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  right:2%;
+  top:0%;
+}
+/*----------------------------------------------------------------------------*/
+.paint-bg{
+ /*background-color: #155263;*/
+ background-image: url("figures/bg_slide.png");
+ background-size: cover;
+}
+
+.normal-bg{
+ background-color: white;
+}
+
+.black-bg{
+ background-color: black;
+}
+
+body{
+  color: white;
+}
+
+.remark-slide-content{
+  padding: 1em 4em 1em 2em !important;
+}
+
+/*Headings*/
+h1{
+ font-family: 'Odibee Sans';
+ font-size: 55px;
+ color: white;/*#ff6f3c;
+ /*text-align: left;*/
+ padding-bottom: 30px;
+}
+
+h2{
+ font-family: 'Odibee Sans';
+ color: #ffc93c;
+ margin-bottom: 0px !important;
+}
+
+h3{
+ font-family: 'Odibee Sans';
+ color: #ffc93c;
+}
+
+/* text ad structures*/
+p{
+ font-family: 'Josefin Sans';
+ font-size: 28px;
+ color: white;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+ font-family: 'Josefin Sans';
+ font-size: 28px;
+ padding-left: 35px;
+ background: url('figures/li-ff6f3c.png') no-repeat left top;
+}
+
+/*links*/
+
+a{
+  color: #ffc93c;
+}
+
+.highlight {
+  background: url('figures/stroke-ff6f3c.png');
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  padding: 8px 0;
+}
+
+.alert{
+  color: #ffc93c;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+/*code*/
+
+
+.remark-inline-code{
+ font-family: 'IBM Plex Mono';
+ font-size: 28px;
+ /*color: white;*/
+ border-style: none;
+}
+
+pre, code {
+ font-family: "IBM Plex Mono";
+ font-size: 22px !important;
+ background-color: transparent !important;
+ border-style: solid;
+ border-width: 5px 5px 5px 5px;
+ border-image: url(figures/stroke-ff6f3c.png) 10% 0% 40% 20% stretch;
+}
+
+.box {
+ border-style: solid;
+ border-width: 5px 5px 5px 5px;
+ border-image: url(figures/stroke-ff6f3c.png) 10% 0% 40% 20% stretch;
+}
+
+/* font size */
+.small{
+  font-size: 20px;
+}
+
+.large{
+  font-size: 34px;
+}
+
+/* hacky shit*/
+.panel1-my_net-auto{
+  width: 60%;
+}
+
+.panel2-my_net-auto{
+  position:absolute;
+  right:-15%;
+  bottom:1%  
+}
